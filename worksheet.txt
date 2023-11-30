@@ -1,0 +1,258 @@
+1. The code is mission the implementation for the play method in the abstract toy class. You can fix this by declaring the play method as an abstract class.
+
+public absract void play();
+
+2. C) Association
+
+3. class Dimension {
+	private double height;
+	private double width;
+	private double length;
+	public void setHeight(double height) {
+		if (height >= 0) {
+			this.height = height;
+		} else {
+			System.out.print("Height cannot be negative.")
+		}
+	}
+   }
+
+4. C) There can only be one per class
+
+5. class Dimension {
+	private double height;
+	private double width;
+	private double length;
+	public Dimension() {
+		this.height = 0;
+		this.width = 0;
+		this.length = 0;
+	}
+   }
+
+6. 
+class Dimension {
+    private double height;
+    private double width;
+    private double length;
+    public Dimension(double height, double width, double length) {
+        setHeight(height);
+        setWidth(width);
+        setLength(length);
+    }
+    public void setHeight(double height) {
+        // Validate and set height
+        if (height >= 0) {
+            this.height = height;
+        } else {
+            System.out.println("Height cannot a negative.");
+        }
+    }
+    public void setWidth(double width) {
+        // Validate and set width
+        if (width >= 0) {
+            this.width = width;
+        } else {
+            System.out.println("Width cannot be a negative.");
+            // Handle the validation as needed
+        }
+    }
+    public void setLength(double length) {
+        // Validate and set length
+        if (length >= 0) {
+            this.length = length;
+        } else {
+            System.out.println("Length cannot be a negative.");
+        }
+    }
+}
+
+7. class Dimension {
+	private double height;
+	private double width;
+	private double length;
+	@Override
+	public String toString() {
+		return String("Height: %.3f, Length: %.3f, Width: %.3f", height, length, width);
+	}
+   }
+
+8. A) New
+
+9. 
+class Toy {
+    private Dimension dimensions;
+    private double weight;
+    public Toy() {
+        this.dimensions = new Dimension();
+        this.weight = 0;
+    }
+}
+
+10. 
+class Toy {
+	private Dimension dimensions;
+	privaye double weight;
+	public Toy() {
+		this.dimensions = new Dismension();
+		this.weight = 0;
+	}
+	public Toy(double width, double height, double length, double weight) {
+		this.dimensions = new Dimension();
+		setWeight(weight);
+		set Dimensions(width, height, length);
+	}
+}
+
+11. 
+class Toy {
+	private Dimension dimensions;
+	private double weight;
+	@Override
+	public String toString() {
+		return getType()
+			dimensiosn.toString()
+			String(Weight: %.3f, weight);
+	}
+}
+
+12. B) I can directly use the variable names dimensions and weight in ActionFiure code to set them
+
+13. 
+class ActionFigure extends Toy{
+	private String gender;
+	public ActionFigure() {
+		super();
+		this.gender = "F";
+	}
+	@Override
+	public String getType() {
+	return "ActionFigure";
+	}
+}
+
+14. 
+class ActionFigure extends Toy {
+	pivate String gender;
+	@Override
+	public String toString() {
+		return super.toString() + "Gender: " + gender;
+	@Override
+	piblic String getType() {
+		return "ActionFigure";
+	}
+}
+
+15.
+import java.util.ArrayList;
+public class ToyArrayList {
+	public static void main(String[] args) {
+		ArrayList<Toy> toyList = new ArrayList<>();
+		Toy toy1 = new Toy();
+		Toy toy2 = new ActionFigure();
+		Toy toy3 = new Toy();
+		toyList.add(toy1);
+		toyList.add(toy2)
+		toyList.add(toy3);
+	}
+}
+
+16. 
+import java.util.ArrayList;
+public class ToyArrayList {
+	public static void main(String[] args) {
+		ArrayList<Toy> toyList = new ArrayList<>();
+		Toy toy1 = new Toy();
+		Toy toy2 = new ActionFigure();
+		Toy toy3 = new Toy();
+		toyList.add(toy1);
+		toyList.add(toy2)
+		toyList.add(toy3);
+		toyList.add(new ActionFigure());
+	}
+}
+
+
+17. 
+
++---------------------------+          +-------------------------+       +-------------------------+
+|      Toy                  |          |    Dimension            |       |    ActionFigure         |
++---------------------------+          +-------------------------+       +-------------------------+
+| - dimensions: Dimension   |          | - height: double        |       | - gender: String        |
+| - weight: double          |          | - width: double         |       |                         |
+|---------------------------|          | - length: double        |       |-------------------------|
+| + Toy()                   |          |-------------------------|       | + ActionFigure()        |
+| + Toy(double, double,     |          | + Dimension()           |       | + ActionFigure(double,  |
+|        double, double)    |          | + Dimension(double,     |       |                     double,|
+| + getType(): String       |          |        double, double)  |       |        double, double,  |
+| + play(): void (abstract) |          | + setHeight(double):    |       |        String)          |
+|---------------------------|          |        void             |       | + getType(): String     |
+                                       | + setWidth(double):     |       | + toString(): String    |
+                                       |        void             |       |------------------------ |
+                                       | + setLength(double):    |
+                                       |        void             |
+                                       +------------------------ +
+
+18. B) association
+
+19. C) To protect people's personal information from hackers
+
+20. A) Inheritance
+
+21. C) It involves exclusive ownership, meaning that no other object could own the owned object.
+
+22. B) Hammer is the subclass, and Tool is the superclass.
+
+23. C) A class can contain objects as data members within it.
+
+24. C) It cannot have any non-abstract functions.
+
+25. A) It enables us to refer to related objects generally but still access specific functionality for each object.
+
+26. C) In combination with making data private, these public functions give us a way to read and write the values of these variables in a controlled way.
+
+27. B) Factory
+
+28. A) Model-View-Controller
+
+29. C) Delegation
+
+30. D) Using interfaces helps a program run more efficiently
+
+31. This violates the Single Responsibility Principle this can be fixed by creating separate classes for each type of building
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
